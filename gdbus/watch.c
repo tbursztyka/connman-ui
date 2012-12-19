@@ -309,6 +309,9 @@ static void filter_data_call_and_free(struct filter_data *data)
 		g_free(cb);
 	}
 
+	g_slist_free(data->callbacks);
+	data->callbacks = NULL;
+
 	filter_data_free(data);
 }
 
