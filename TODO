@@ -1,0 +1,7 @@
+- Support brand new ConnMan's vpnd agent API.
+- Translations (German, Spanish, Italian ...)
+- Redraw the UI layouts (mainly settings.ui, which is currently lame)
+- Propose own icon set (svg based)
+- Support Agent API's RequestBrowser() method properly
+- Support moving down/up connected services (MoveBefore(), MoveAfter Service 
+API's methods)

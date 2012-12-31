@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <!-- interface-requires gtk+ 3.0 -->
+  <object class="GtkImage" id="image1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-yes</property>
+  </object>
+  <object class="GtkImage" id="image2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-no</property>
+  </object>
+  <object class="GtkImage" id="image3">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-network</property>
+  </object>
+  <object class="GtkMenu" id="cui_right_menu">
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkImageMenuItem" id="cui_item_offlinemode_on">
+        <property name="label" translatable="yes">Airplane Mode</property>
+        <property name="use_action_appearance">False</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="tooltip_text" translatable="yes">unset airplane mode</property>
+        <property name="image">image1</property>
+        <property name="use_stock">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="cui_item_offlinemode_off">
+        <property name="label" translatable="yes">Airplane Mode</property>
+        <property name="use_action_appearance">False</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="tooltip_text" translatable="yes">set airplane mode</property>
+        <property name="image">image2</property>
+        <property name="use_stock">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="cui_sep_technology_up">
+        <property name="use_action_appearance">False</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="cui_sep_technology_down">
+        <property name="use_action_appearance">False</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="cui_item_tethering">
+        <property name="label" translatable="yes">Share connection</property>
+        <property name="use_action_appearance">False</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="tooltip_text" translatable="yes">Share your connection (tethering)</property>
+        <property name="image">image3</property>
+        <property name="use_stock">False</property>
+        <child type="submenu">
+          <object class="GtkMenu" id="cui_tethering_menu">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparatorMenuItem" id="cui_sep_tethering">
+        <property name="use_action_appearance">False</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkImageMenuItem" id="cui_item_quit">
+        <property name="label">gtk-quit</property>
+        <property name="use_action_appearance">False</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="tooltip_text" translatable="yes">Quit ConnMan-UI</property>
+        <property name="use_underline">True</property>
+        <property name="use_stock">True</property>
+        <property name="always_show_image">True</property>
+      </object>
+    </child>
+  </object>
+</interface>

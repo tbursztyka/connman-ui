@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <!-- interface-requires gtk+ 3.0 -->
+  <object class="GtkMenu" id="cui_left_menu">
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkMenuItem" id="service_list_menu_item">
+        <property name="use_action_appearance">False</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="events"/>
+        <property name="label" translatable="yes">Available networks</property>
+        <property name="use_underline">True</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="cui_scan_spinner">
+        <property name="use_action_appearance">False</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="tooltip_text" translatable="yes">Scanning...</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="cui_list_more_item">
+        <property name="use_action_appearance">False</property>
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes">More networks ...</property>
+        <child type="submenu">
+          <object class="GtkMenu" id="cui_more_menu">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

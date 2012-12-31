@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <!-- interface-requires gtk+ 3.0 -->
+  <object class="GtkStatusIcon" id="cui_trayicon">
+    <property name="has_tooltip">True</property>
+    <property name="tooltip_text">Connman UI</property>
+  </object>
+</interface>

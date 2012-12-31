@@ -1,0 +1,20 @@
+[encoding: UTF-8]
+[type: gettext/glade] data/ui/agent.ui
+[type: gettext/glade] data/ui/left_menu.ui
+[type: gettext/glade] data/ui/right_menu.ui
+[type: gettext/glade] data/ui/settings.ui
+[type: gettext/glade] data/ui/tray.ui
+src/agent_dialogs.c
+src/connman-ui-gtk.h
+src/gtkservice.c
+src/gtkservice.h
+src/gtktechnology.c
+src/gtktechnology.h
+src/left-menu.c
+src/main.c
+src/right-menu.c
+src/settings.c
+src/theme.c
+src/tray.c
+src/utils.c
+

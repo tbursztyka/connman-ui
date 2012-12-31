@@ -1,0 +1,47 @@
+ConnMan-UI
+==========
+
+A full-featured GTK based trayicon UI for ConnMan.
+
+It targets all WM/DM users but Gnome3 ones*. It works on any Linux WM/DM 
+which provides a freedesktop compliant system tray. (kde, awesome, ...)
+
+It exposes almost all features provided by ConnMan API (small features are 
+missing, see TODO for more informations). You can enable/disable a technology 
+(wired, wifi, cellular, bt, ...), connect/disconnect a service, configure a 
+service (IPv4, IPv6, DNS, Timeservers, etc...), share your current connection 
+(tethering) and so on. Everything is accessible through the mouse via the 
+trayicon, all with left and right click.
+
+
+Requirements
+------------
+
+- libdbus ( >= 1.4 )
+- glib ( >= 2.28 )
+- gtk+ ( >=3.0 )
+
+
+Compilation and installation
+----------------------------
+
+./bootstrap && ./configure --prefix=usr && make && sudo make install
+
+
+Notes
+-----
+
+This is an alpha stage software. Though it has proven to be stable, the look and 
+feel require still lot of work, thus contributions are welcome!
+
+If you want to contribute please take a look at the TODO file and/or 
+come to #connman@irc.freenode.net
+
+Send patches to: connman<_at_>connman.net
+CC to: tomasz.bursztyka<_at_>linux.intel.com
+
+
+*: for Gnome3 users please look for connman-extension in 
+https://extensions.gnome.org/
+
+
