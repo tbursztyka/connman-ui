@@ -63,7 +63,7 @@ int connman_interface_init(connman_interface_cb_f interface_connected_cb,
 		return -ENOMEM;
 
 	dbus_cnx_session = g_dbus_setup_bus(DBUS_BUS_SESSION, NULL, NULL);
-	if (dbus_cnx == NULL) {
+	if (dbus_cnx_session == NULL) {
 		dbus_connection_unref(dbus_cnx);
 		return -ENOMEM;
 	}
@@ -85,6 +85,8 @@ int connman_interface_init(connman_interface_cb_f interface_connected_cb,
 	connman = g_try_malloc0(sizeof(struct connman_interface));
 	if (connman == NULL) {
 		dbus_connection_unref(dbus_cnx);
+		dbus_connection_unref(dbus_cnx_session);
+
 		return -ENOMEM;
 	}
 
@@ -100,6 +102,7 @@ int connman_interface_init(connman_interface_cb_f interface_connected_cb,
 					NULL, NULL);
 	if (connman->interface_watch_id == 0) {
 		dbus_connection_unref(dbus_cnx);
+		dbus_connection_unref(dbus_cnx_session);
 		g_free(connman);
 
 		return -EINVAL;
