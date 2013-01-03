@@ -41,7 +41,7 @@ static void gtk_service_dispose(GObject *object);
 static gboolean gtk_service_button_release_event(GtkWidget *widget,
 							GdkEventButton *event);
 
-G_DEFINE_TYPE_WITH_CODE(GtkService, gtk_service, GTK_TYPE_MENU_ITEM, 0)
+G_DEFINE_TYPE(GtkService, gtk_service, GTK_TYPE_MENU_ITEM);
 
 static void gtk_service_class_init(GtkServiceClass *klass)
 {

@@ -39,7 +39,7 @@ static void gtk_technology_dispose(GObject *object);
 static gboolean gtk_technology_button_release_event(GtkWidget *widget,
 							GdkEventButton *event);
 
-G_DEFINE_TYPE_WITH_CODE(GtkTechnology, gtk_technology, GTK_TYPE_MENU_ITEM, 0);
+G_DEFINE_TYPE(GtkTechnology, gtk_technology, GTK_TYPE_MENU_ITEM);
 
 static void gtk_technology_class_init(GtkTechnologyClass *klass)
 {
