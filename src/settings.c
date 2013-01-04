@@ -641,6 +641,14 @@ static void settings_ok_callback(GtkButton *button, gpointer user_data)
 		printf("Unable to set property, code %d\n", ret);
 }
 
+static void settings_close_callback(GtkDialog *dialog_box,
+					gint response_id, gpointer user_data)
+{
+	if (response_id == GTK_RESPONSE_DELETE_EVENT ||
+				response_id == GTK_RESPONSE_CLOSE)
+		settings_cancel_callback(NULL, NULL);
+}
+
 static void settings_connect_signals(void)
 {
 	set_signal_callback(builder, "ipv4_dhcp", "toggled",
@@ -707,6 +715,9 @@ static void settings_connect_signals(void)
 				G_CALLBACK(settings_ok_callback), NULL);
 	set_signal_callback(builder, "settings_close", "clicked",
 				G_CALLBACK(settings_cancel_callback), NULL);
+
+	set_signal_callback(builder, "service_settings_dbox", "response",
+				G_CALLBACK(settings_close_callback), NULL);
 }
 
 gint cui_settings_popup(const char *selected_path)

@@ -225,22 +225,36 @@ static void agent_ok_login(GtkButton *button, gpointer user_data)
 	cui_tray_enable();
 }
 
+static void cancel(void)
+{
+	cui_tray_enable();
+
+	connman_agent_reply_canceled();
+}
+
 static void agent_cancel(GtkButton *button, gpointer user_data)
 {
-	GtkWidget *dialog_box = user_data;
+	GtkDialog *dialog_box = user_data;
 
-	gtk_widget_hide(dialog_box);
-	connman_agent_reply_canceled();
+	gtk_widget_hide(GTK_WIDGET(dialog_box));
 
-	cui_tray_enable();
+	cancel();
+}
+
+static void agent_close(GtkDialog *dialog_box,
+			gint response_id, gpointer user_data)
+{
+	if (response_id == GTK_RESPONSE_DELETE_EVENT ||
+				response_id == GTK_RESPONSE_CLOSE)
+		cancel();
 }
 
 static void agent_retry(GtkButton *button, gpointer user_data)
 {
-	connman_agent_reply_retry();
 	gtk_widget_hide(GTK_WIDGET(error_dbox));
-
 	cui_tray_enable();
+
+	connman_agent_reply_retry();
 }
 
 static void agent_passphrase_changed(GtkToggleButton *togglebutton,
@@ -433,7 +447,11 @@ gint cui_load_agent_dialogs(void)
 	button = (GtkWidget *) gtk_builder_get_object(cui_builder,
 							"input_cancel");
 	g_signal_connect(button, "clicked",
-			G_CALLBACK(agent_cancel), input_dbox);
+				G_CALLBACK(agent_cancel), input_dbox);
+	g_signal_connect(input_dbox, "response",
+				G_CALLBACK(agent_close), NULL);
+	g_signal_connect(input_dbox, "delete-event",
+				G_CALLBACK(gtk_widget_hide_on_delete), NULL);
 
 	/* Login dbox widgets */
 	button = (GtkWidget *) gtk_builder_get_object(cui_builder,
@@ -451,6 +469,10 @@ gint cui_load_agent_dialogs(void)
 							"login_cancel");
 	g_signal_connect(button, "clicked",
 				G_CALLBACK(agent_cancel), login_dbox);
+	g_signal_connect(login_dbox, "response",
+				G_CALLBACK(agent_close), NULL);
+	g_signal_connect(login_dbox, "delete-event",
+				G_CALLBACK(gtk_widget_hide_on_delete), NULL);
 
 	/* Tethering dbox widgets */
 	button = (GtkWidget *) gtk_builder_get_object(cui_builder,
@@ -469,6 +491,10 @@ gint cui_load_agent_dialogs(void)
 							"tethering_cancel");
 	g_signal_connect(button, "clicked",
 				G_CALLBACK(agent_cancel), tethering_dbox);
+	g_signal_connect(tethering_dbox, "response",
+				G_CALLBACK(agent_close), NULL);
+	g_signal_connect(tethering_dbox, "delete-event",
+				G_CALLBACK(gtk_widget_hide_on_delete), NULL);
 
 	/* Error dbox buttons */
 	button = (GtkWidget *) gtk_builder_get_object(cui_builder,
@@ -479,6 +505,10 @@ gint cui_load_agent_dialogs(void)
 							"error_cancel");
 	g_signal_connect(button, "clicked",
 				G_CALLBACK(agent_cancel), error_dbox);
+	g_signal_connect(error_dbox, "response",
+				G_CALLBACK(agent_close), NULL);
+	g_signal_connect(error_dbox, "delete-event",
+				G_CALLBACK(gtk_widget_hide_on_delete), NULL);
 
 	return 0;
 }
