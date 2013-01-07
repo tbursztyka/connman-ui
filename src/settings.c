@@ -561,30 +561,30 @@ static gboolean key_released_entry_cb(GtkWidget *widget,
 static void get_ipv4_configuration(struct connman_ipv4 *ipv4)
 {
 	ipv4->method = (char *) ipv4_method;
-	ipv4->address = (char *) get_entry_text(builder, "ipv4_address");
-	ipv4->netmask = (char *) get_entry_text(builder, "ipv4_netmask");
-	ipv4->gateway = (char *) get_entry_text(builder, "ipv4_gateway");
+	ipv4->address = (char *) get_entry_text(builder, "ipv4_conf_address");
+	ipv4->netmask = (char *) get_entry_text(builder, "ipv4_conf_netmask");
+	ipv4->gateway = (char *) get_entry_text(builder, "ipv4_conf_gateway");
 }
 
 static void get_ipv6_configuration(struct connman_ipv6 *ipv6)
 {
 	const char *prefix;
 
-	prefix = get_entry_text(builder, "ipv6_prefix_length");
+	prefix = get_entry_text(builder, "ipv6_conf_prefix_length");
 
 	ipv6->method = (char *) ipv6_method;
-	ipv6->address = (char *) get_entry_text(builder, "ipv6_address");
+	ipv6->address = (char *) get_entry_text(builder, "ipv6_conf_address");
 	ipv6->prefix = atoi(prefix);
-	ipv6->gateway = (char *) get_entry_text(builder, "ipv6_gateway");
+	ipv6->gateway = (char *) get_entry_text(builder, "ipv6_conf_gateway");
 	ipv6->privacy = (char *) ipv6_privacy;
 }
 
 static void get_proxy_configuration(struct connman_proxy *proxy)
 {
 	proxy->method = (char *) proxy_method;
-	proxy->url = (char *) get_entry_text(builder, "proxy_url");
-	proxy->servers = (char *) get_entry_text(builder, "proxy_servers");
-	proxy->excludes = (char *) get_entry_text(builder, "proxy_excludes");
+	proxy->url = (char *) get_entry_text(builder, "proxy_conf_url");
+	proxy->servers = (char *) get_entry_text(builder, "proxy_conf_servers");
+	proxy->excludes = (char *) get_entry_text(builder, "proxy_conf_excludes");
 }
 
 static void settings_cancel_callback(GtkButton *button, gpointer user_data)
