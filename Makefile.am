@@ -53,7 +53,7 @@ src_connman_ui_gtk_SOURCES = $(gdbus_sources) $(common_sources) \
 src_connman_ui_gtk_CFLAGS = $(AM_CFLAGS) @GTK_CFLAGS@
 src_connman_ui_gtk_LDADD = @GLIB_LIBS@ @DBUS_LIBS@ @GTK_LIBS@
 
-INCLUDES = -I$(builddir)/include -I$(builddir)/src \
+AM_CPPFLAGS = -I$(builddir)/include -I$(builddir)/src \
 				-I$(srcdir)/gdbus -I$(srcdir)/lib
 
 ACLOCAL_AMFLAGS = -I m4
