@@ -1,7 +1,3 @@
 #!/bin/sh
-
-aclocal && \
-    autoheader && \
-        libtoolize --automake --copy --force && \
-	    automake --add-missing --copy && \
-		autoconf
+echo "Deprecated! Please use autogen.sh" >&2
+exec ./autogen.sh "$@"
