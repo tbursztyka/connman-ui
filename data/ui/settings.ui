@@ -1546,7 +1546,7 @@
                           <object class="GtkLabel" id="label28">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">Ethernet informations</property>
+                            <property name="label" translatable="yes">Ethernet information</property>
                           </object>
                         </child>
                       </object>
@@ -1699,7 +1699,7 @@
                           <object class="GtkLabel" id="label29">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="label" translatable="yes">VPN provider informations</property>
+                            <property name="label" translatable="yes">VPN provider information</property>
                           </object>
                         </child>
                       </object>
