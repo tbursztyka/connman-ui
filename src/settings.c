@@ -704,11 +704,11 @@ static void settings_connect_signals(void)
 	set_signal_callback(builder, "proxy_manual", "toggled",
 			G_CALLBACK(toggled_proxy_method_cb), "proxy_manual");
 
-	set_signal_callback(builder, "proxy_url", "key-release-event",
+	set_signal_callback(builder, "proxy_conf_url", "key-release-event",
 			G_CALLBACK(key_released_entry_cb), &proxy_changed);
-	set_signal_callback(builder, "proxy_servers", "key-release-event",
+	set_signal_callback(builder, "proxy_conf_servers", "key-release-event",
 			G_CALLBACK(key_released_entry_cb), &proxy_changed);
-	set_signal_callback(builder, "proxy_excludes", "key-release-event",
+	set_signal_callback(builder, "proxy_conf_excludes", "key-release-event",
 			G_CALLBACK(key_released_entry_cb), &proxy_changed);
 
 	set_signal_callback(builder, "settings_ok", "clicked",
