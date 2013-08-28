@@ -138,8 +138,6 @@ static bool parse_input_request(DBusMessageIter *arg, void *user_data)
 	struct agent_input_data *data = user_data;
 	const char *name;
 
-	printf("parse_input_request\n");
-
 	if (cui_dbus_get_basic(arg, DBUS_TYPE_STRING, &name) != 0)
 		return FALSE;
 
@@ -183,8 +181,6 @@ static DBusMessage *agent_request_input_method(DBusConnection *dbus_cnx,
 	struct agent_input_data arg_data;
 	DBusMessageIter arg;
 	const char *path;
-
-	printf("agent_request_input_method\n");
 
 	if (agent_if == NULL || agent_if->input_cb == NULL)
 		goto error;
