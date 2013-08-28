@@ -1,7 +1,7 @@
 AC_PREREQ(2.60)
 AC_INIT(connman-ui, 0.1)
 
-AM_INIT_AUTOMAKE([foreign subdir-objects color-tests])
+AM_INIT_AUTOMAKE([foreign subdir-objects])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
 
