@@ -267,9 +267,10 @@ static void agent_passphrase_changed(GtkToggleButton *togglebutton,
 							"secret_entry");
 
 	label = gtk_button_get_label(GTK_BUTTON(togglebutton));
-	if (g_strcmp0(label, "WPS Push-Button") == 0)
+	if (g_strcmp0(label, "WPS Push-Button") == 0) {
 		gtk_widget_set_sensitive(entry, FALSE);
-	else
+		set_widget_sensitive(cui_builder, "input_ok", TRUE);
+	} else
 		gtk_widget_set_sensitive(entry, TRUE);
 }
 
