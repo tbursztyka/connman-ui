@@ -488,7 +488,7 @@ static struct connman_proxy *parse_proxy(DBusMessageIter *arg,
 		set = TRUE;
 	}
 
-	if (cui_dbus_get_dict_entry_basic(&dict, "Url",
+	if (cui_dbus_get_dict_entry_basic(&dict, "URL",
 					DBUS_TYPE_STRING, &value) == 0) {
 		g_free(proxy->url);
 		proxy->url = g_strdup(value);
