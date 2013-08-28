@@ -29,7 +29,7 @@ msgid "Network "
 msgstr "Réseau"
 
 #: ../data/ui/agent.ui.h:4
-msgid "requires informations to get connected"
+msgid "requires information to get connected"
 msgstr "requiert des informations supplémentaires pour être connecté"
 
 #: ../data/ui/agent.ui.h:5
@@ -73,7 +73,7 @@ msgid "Password:    "
 msgstr "Mot de passe:  "
 
 #: ../data/ui/agent.ui.h:15
-msgid "Shared WiFi connection informations"
+msgid "Shared WiFi connection information"
 msgstr "Informations relatives au partage de connexion WiFi"
 
 #: ../data/ui/agent.ui.h:16
@@ -269,7 +269,7 @@ msgid "  Duplex:  "
 msgstr ""
 
 #: ../data/ui/settings.ui.h:38
-msgid "Ethernet informations"
+msgid "Ethernet information"
 msgstr "Information ethernet"
 
 #: ../data/ui/settings.ui.h:39
@@ -289,7 +289,7 @@ msgid "  Type:  "
 msgstr ""
 
 #: ../data/ui/settings.ui.h:43
-msgid "VPN provider informations"
+msgid "VPN provider information"
 msgstr "Informations VPN"
 
 #: ../src/agent_dialogs.c:107
