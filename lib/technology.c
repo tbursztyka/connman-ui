@@ -426,6 +426,7 @@ static void set_property_cb(DBusPendingCall *pending, void *user_data)
 	if (reply == NULL)
 		return;
 
+	dbus_error_init(&error);
 	if (dbus_set_error_from_message(&error, reply) == FALSE)
 		goto done;
 
