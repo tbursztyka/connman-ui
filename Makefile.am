@@ -30,12 +30,16 @@ endif
 ui_DATA = data/ui/agent.ui data/ui/left_menu.ui data/ui/right_menu.ui \
 					data/ui/settings.ui data/ui/tray.ui
 
-icons_DATA = data/icons/bad_signal.png data/icons/cellular.png \
-		data/icons/ethernet.png data/icons/good_signal.png \
-		data/icons/low_signal.png data/icons/medium_signal.png \
-		data/icons/network_disconnected.png \
-		data/icons/network_online.png data/icons/network_ready.png \
-		data/icons/tethering.png
+icons_DATA = data/icons/gsm-3g-full.png \
+		data/icons/network-wired-symbolic.png \
+		data/icons/network-wireless-signal-excellent-symbolic.png \
+		data/icons/network-wireless-signal-good-symbolic.png \
+		data/icons/network-wireless-signal-weak-symbolic.png \
+		data/icons/network-wireless-signal-ok-symbolic.png \
+		data/icons/network-offline-symbolic.png \
+		data/icons/network-transmit-receive-symbolic.png \
+		data/icons/network-idle-symbolic.png \
+		data/icons/nm-adhoc.png
 
 AM_CFLAGS = @GLIB_CFLAGS@ @DBUS_CFLAGS@ \
 	-DCUI_UI_PATH=\""$(uidir)"\" \
