@@ -21,14 +21,14 @@
 
 #include <connman-ui-gtk.h>
 
-static GtkIconTheme *cui_theme = NULL;
+static GtkIconTheme *icon_theme = NULL;
 
 void cui_theme_get_tethering_icone_and_info(GdkPixbuf **image,
 							const char **info)
 {
 	if (image != NULL)
-		*image = gtk_icon_theme_load_icon(cui_theme,
-					"tethering", 24, 0, NULL);
+		*image = gtk_icon_theme_load_icon(icon_theme,
+					"nm-adhoc", 24, 0, NULL);
 	if (info != NULL)
 		*info = _("Tethering");
 }
@@ -40,12 +40,12 @@ void cui_theme_get_type_icone_and_info(const char *type,
 	GdkPixbuf *img = NULL;
 
 	if (g_strcmp0(type, "ethernet") == 0) {
-		img = gtk_icon_theme_load_icon(cui_theme,
-					"ethernet", 24, 0, NULL);
+		img = gtk_icon_theme_load_icon(icon_theme,
+					"network-wired-symbolic", 22, 0, NULL);
 		nfo = _("Ethernet");
 	} else if (g_strcmp0(type, "cellular") == 0) {
-		img = gtk_icon_theme_load_icon(cui_theme,
-					"cellular", 24, 0, NULL);
+		img = gtk_icon_theme_load_icon(icon_theme,
+					"gsm-3g-full", 22, 0, NULL);
 		nfo = _("Cellular");
 	}
 
@@ -63,20 +63,20 @@ void cui_theme_get_signal_icone_and_info(uint8_t signal_strength,
 	GdkPixbuf *img;
 
 	if (signal_strength >= 80) {
-		img = gtk_icon_theme_load_icon(cui_theme,
-					"good_signal", 24, 0, NULL);
+		img = gtk_icon_theme_load_icon(icon_theme,
+					"network-wireless-signal-excellent-symbolic", 22, 0, NULL);
 		nfo = _("Very good signal");
 	} else if (signal_strength >= 60 && signal_strength < 80) {
-		img = gtk_icon_theme_load_icon(cui_theme,
-					"medium_signal", 24, 0, NULL);
+		img = gtk_icon_theme_load_icon(icon_theme,
+					"network-wireless-signal-good-symbolic", 22, 0, NULL);
 		nfo = _("Good signal");
 	} else if (signal_strength >= 40 && signal_strength < 60) {
-		img = gtk_icon_theme_load_icon(cui_theme,
-					"low_signal", 24, 0, NULL);
+		img = gtk_icon_theme_load_icon(icon_theme,
+					"network-wireless-signal-ok-symbolic", 22, 0, NULL);
 		nfo = _("Low signal");
 	} else {
-		img = gtk_icon_theme_load_icon(cui_theme,
-					"bad_signal", 24, 0, NULL);
+		img = gtk_icon_theme_load_icon(icon_theme,
+					"network-wireless-signal-weak-symbolic", 22, 0, NULL);
 		nfo = _("Very low signal");
 	}
 
@@ -97,23 +97,23 @@ void cui_theme_get_state_icone_and_info(enum connman_state state,
 
 	switch (state) {
 	case CONNMAN_STATE_UNKNOWN:
-		img = gtk_icon_theme_load_icon(cui_theme,
-					"network_disconnected", 24, 0, NULL);
+		img = gtk_icon_theme_load_icon(icon_theme,
+					"network-offline-symbolic", 24, 0, NULL);
 		nfo = _("Connman is not running");
 		break;
 	case CONNMAN_STATE_READY:
-		img = gtk_icon_theme_load_icon(cui_theme,
-					"network_ready",24, 0, NULL);
+		img = gtk_icon_theme_load_icon(icon_theme,
+					"network-idle-symbolic", 24, 0, NULL);
 		nfo = _("Connected");
 		break;
 	case CONNMAN_STATE_ONLINE:
-		img = gtk_icon_theme_load_icon(cui_theme,
-					"network_online", 24, 0, NULL);
+		img = gtk_icon_theme_load_icon(icon_theme,
+					"network-transmit-receive-symbolic", 24, 0, NULL);
 		nfo = _("Online");
 		break;
 	default:
-		img = gtk_icon_theme_load_icon(cui_theme,
-					"network_disconnected", 24, 0, NULL);
+		img = gtk_icon_theme_load_icon(icon_theme,
+					"network-offline-symbolic", 24, 0, NULL);
 		nfo = _("Disconnected");
 
 		break;
@@ -128,9 +128,6 @@ void cui_theme_get_state_icone_and_info(enum connman_state state,
 
 void cui_load_theme(void)
 {
-	cui_theme = gtk_icon_theme_new();
-	if (cui_theme == NULL)
-		return;
-
-	gtk_icon_theme_append_search_path(cui_theme, CUI_ICON_PATH);
+	icon_theme = gtk_icon_theme_get_default ();
+	gtk_icon_theme_append_search_path(icon_theme, CUI_ICON_PATH);
 }
