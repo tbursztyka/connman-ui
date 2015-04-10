@@ -77,13 +77,13 @@ static void gtk_technology_init(GtkTechnology *technology)
 	priv->name = (GtkLabel *) gtk_label_new(NULL);
 
 
-	gtk_widget_set_margin_left((GtkWidget *)priv->enabler, 0);
-	gtk_widget_set_margin_right((GtkWidget *)priv->enabler, 0);
+	gtk_widget_set_margin_start((GtkWidget *)priv->enabler, 0);
+	gtk_widget_set_margin_end((GtkWidget *)priv->enabler, 0);
 	gtk_widget_set_margin_top((GtkWidget *)priv->enabler, 0);
 	gtk_widget_set_margin_bottom((GtkWidget *)priv->enabler, 0);
 
-	gtk_widget_set_margin_left((GtkWidget *)priv->name, 0);
-	gtk_widget_set_margin_right((GtkWidget *)priv->name, 0);
+	gtk_widget_set_margin_start((GtkWidget *)priv->name, 0);
+	gtk_widget_set_margin_end((GtkWidget *)priv->name, 0);
 	gtk_widget_set_margin_top((GtkWidget *)priv->name, 0);
 	gtk_widget_set_margin_bottom((GtkWidget *)priv->name, 0);
 
