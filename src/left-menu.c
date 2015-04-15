@@ -54,6 +54,26 @@ static void remove_service_cb(const char *path)
 	g_hash_table_remove(service_items, path);
 }
 
+static void accumulate_menu_size(GtkWidget* widget, gpointer data)
+{
+	GtkRequisition *menu_size = (GtkRequisition *)data;
+	GtkRequisition item_size;
+	gtk_widget_get_preferred_size(widget, NULL, &item_size);
+	menu_size->width = MAX(item_size.width, menu_size->width);
+	menu_size->height += item_size.height;
+}
+
+static void resize_left_menu()
+{
+	GtkRequisition menu_size;
+	menu_size.width = 0;
+	menu_size.height = 0;
+	gtk_container_foreach(GTK_CONTAINER(cui_left_menu),
+			accumulate_menu_size, &menu_size);
+	gtk_widget_set_size_request(GTK_WIDGET(cui_left_menu),
+			menu_size.width, menu_size.height);
+}
+
 static void get_services_cb(void *user_data)
 {
 	GSList *services, *list;
@@ -72,6 +92,10 @@ static void get_services_cb(void *user_data)
 		gtk_widget_show(GTK_WIDGET(cui_list_more_item));
 
 	g_slist_free(services);
+
+	// Resize and reposition left menu after updating the list
+	resize_left_menu();
+	gtk_menu_reposition(cui_left_menu);
 }
 
 static void scanning_cb(void *user_data)
@@ -83,6 +107,10 @@ static void scanning_cb(void *user_data)
 	gtk_spinner_stop(spin);
 	gtk_widget_hide((GtkWidget *)cui_scan_spinner);
 	gtk_widget_hide((GtkWidget *)spin);
+
+	// Resize and reposition left menu after hidding the spinner
+	resize_left_menu();
+	gtk_menu_reposition(cui_left_menu);
 }
 
 static void delete_service_item(gpointer data)
