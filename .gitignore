@@ -4,6 +4,7 @@
 *.la
 *.swp
 *.patch
+*.gmo
 .deps
 .libs
 .dirstamp
@@ -31,3 +32,4 @@ src/connman-ui-gtk
 include/version.h
 po/POTFILES
 po/remove-potcdate.sed
+po/stamp-it
