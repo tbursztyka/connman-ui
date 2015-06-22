@@ -1,0 +1,360 @@
+#
+# Copyright (C) 2015  Adolfo Jayme Barrientos. All rights reserved.
+# This file is distributed under the same license as the Connman UI package.
+# Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-21 15:06+0200\n"
+"PO-Revision-Date: 2015-06-06 20:51-0600\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.7.7\n"
+
+#: ../data/ui/agent.ui.h:1
+msgid "Retry"
+msgstr "Reintentar"
+
+#: ../data/ui/agent.ui.h:2
+msgid "  Error  "
+msgstr "  Error  "
+
+#: ../data/ui/agent.ui.h:3
+msgid "Network "
+msgstr "Red"
+
+#: ../data/ui/agent.ui.h:4
+msgid "requires information to get connected"
+msgstr "necesita información para efectuar la conexión"
+
+#: ../data/ui/agent.ui.h:5
+msgid "Name:"
+msgstr "Nombre:"
+
+#: ../data/ui/agent.ui.h:6
+msgid "Identity:"
+msgstr "Identidad:"
+
+#: ../data/ui/agent.ui.h:7
+msgid "Passphrase:"
+msgstr "Frase de contraseña:"
+
+#: ../data/ui/agent.ui.h:8
+msgid "minimum 8 characters"
+msgstr "8 caracteres como mínimo"
+
+#: ../data/ui/agent.ui.h:9
+msgid "Previous Passphrase:"
+msgstr "Contraseña anterior:"
+
+#: ../data/ui/agent.ui.h:10
+msgid "You are probably trying to connect to a Hotspot."
+msgstr "Probablemente está intentando conectar con un «hotspot»."
+
+#: ../data/ui/agent.ui.h:11
+msgid ""
+"   Login is required to get\n"
+"plain access to the network"
+msgstr ""
+"   Es necesario acceder para\n"
+"obtener acceso a la red"
+
+#: ../data/ui/agent.ui.h:13
+msgid "Username:  "
+msgstr "Nombre de usuario:  "
+
+#: ../data/ui/agent.ui.h:14
+msgid "Password:    "
+msgstr "Contraseña:  "
+
+#: ../data/ui/agent.ui.h:15
+msgid "Shared WiFi connection information"
+msgstr "Información sobre la conexión wifi compartida"
+
+#: ../data/ui/agent.ui.h:16
+msgid "SSID: "
+msgstr "SSID: "
+
+#: ../data/ui/agent.ui.h:17
+msgid "Passphrase: "
+msgstr "Frase de contraseña: "
+
+#: ../data/ui/left_menu.ui.h:1
+msgid "Available networks"
+msgstr "Redes disponibles"
+
+#: ../data/ui/left_menu.ui.h:2
+msgid "Scanning..."
+msgstr "Explorando…"
+
+#: ../data/ui/left_menu.ui.h:3
+msgid "More networks ..."
+msgstr "Más redes…"
+
+#: ../data/ui/right_menu.ui.h:1
+msgid "Airplane Mode"
+msgstr "Modo avión"
+
+#: ../data/ui/right_menu.ui.h:2
+msgid "unset airplane mode"
+msgstr "desactivar modo avión"
+
+#: ../data/ui/right_menu.ui.h:3
+msgid "set airplane mode"
+msgstr "activar modo avión"
+
+#: ../data/ui/right_menu.ui.h:4
+msgid "Share connection"
+msgstr "Compartir conexión"
+
+#: ../data/ui/right_menu.ui.h:5
+msgid "Share your connection (tethering)"
+msgstr "Compartir conexión («tethering»)"
+
+#: ../data/ui/right_menu.ui.h:6
+msgid "Quit ConnMan-UI"
+msgstr "Salir de ConnMan-UI"
+
+#: ../data/ui/settings.ui.h:1
+msgid "Autoconnect"
+msgstr "Conectar automáticamente"
+
+#: ../data/ui/settings.ui.h:2
+msgid "Favorite"
+msgstr "Favorito"
+
+#: ../data/ui/settings.ui.h:3
+msgid "Method:  "
+msgstr "Método:  "
+
+#: ../data/ui/settings.ui.h:4
+msgid "DHCP"
+msgstr "DHCP"
+
+#: ../data/ui/settings.ui.h:5
+msgid "Manual"
+msgstr "Manual"
+
+#: ../data/ui/settings.ui.h:6
+msgid "Off"
+msgstr "Apagado"
+
+#: ../data/ui/settings.ui.h:7
+msgid "Address:"
+msgstr "Dirección:"
+
+#: ../data/ui/settings.ui.h:8
+msgid "Netmask:"
+msgstr "Máscara de red:"
+
+#: ../data/ui/settings.ui.h:9
+msgid "Gateway:"
+msgstr "Puerta de enlace:"
+
+#: ../data/ui/settings.ui.h:10
+msgid "IPv4 Settings"
+msgstr "Configuración de IPv4"
+
+#: ../data/ui/settings.ui.h:11
+msgid "Auto"
+msgstr "Automático"
+
+#: ../data/ui/settings.ui.h:12
+msgid "Prefix length:"
+msgstr "Longitud de prefijo:"
+
+#: ../data/ui/settings.ui.h:13
+msgid "Privacy:           "
+msgstr "Privacidad:           "
+
+#: ../data/ui/settings.ui.h:14
+msgid "Prefered"
+msgstr "Preferida"
+
+#: ../data/ui/settings.ui.h:15
+msgid "Enabled"
+msgstr "Activada"
+
+#: ../data/ui/settings.ui.h:16
+msgid "Disabled"
+msgstr "Desactivada"
+
+#: ../data/ui/settings.ui.h:17
+msgid "IPv6 Settings"
+msgstr "Configuración de IPv6"
+
+#: ../data/ui/settings.ui.h:18
+msgid "Name servers"
+msgstr "Servidores de nombres"
+
+#: ../data/ui/settings.ui.h:19
+msgid "In use:"
+msgstr "En uso:"
+
+#: ../data/ui/settings.ui.h:20
+msgid "Configuration:"
+msgstr "Configuración:"
+
+#: ../data/ui/settings.ui.h:21
+msgid "One or multiple IPs separated by ';'"
+msgstr "Una o más IP separadas por «;»"
+
+#: ../data/ui/settings.ui.h:22
+msgid "Domains"
+msgstr "Dominios"
+
+#: ../data/ui/settings.ui.h:23
+msgid "One ore many domains separated by ';'"
+msgstr "Uno o más dominios separados por «;»"
+
+#: ../data/ui/settings.ui.h:24
+msgid "DNS Settings"
+msgstr "Configuración de DNS"
+
+#: ../data/ui/settings.ui.h:25
+msgid "Method:"
+msgstr "Método:"
+
+#: ../data/ui/settings.ui.h:26
+msgid "Direct"
+msgstr "Directa"
+
+#: ../data/ui/settings.ui.h:27
+msgid "URL:"
+msgstr "URL:"
+
+#: ../data/ui/settings.ui.h:28
+msgid "Servers:"
+msgstr "Servidores:"
+
+#: ../data/ui/settings.ui.h:29
+msgid "Excludes:"
+msgstr "Exclusiones:"
+
+#: ../data/ui/settings.ui.h:30
+msgid "Proxy Settings"
+msgstr "Configuración de «proxy»"
+
+#: ../data/ui/settings.ui.h:31
+msgid "One or many IPs/hostnames separated by ';'"
+msgstr "Uno o más equipos o IP separados por «;»"
+
+#: ../data/ui/settings.ui.h:32
+msgid "Time servers Settings"
+msgstr "Configuración de servidores de hora"
+
+#: ../data/ui/settings.ui.h:33
+msgid "Interface:  "
+msgstr "Interfaz: "
+
+#: ../data/ui/settings.ui.h:34
+msgid "Address:  "
+msgstr "Dirección:  "
+
+#: ../data/ui/settings.ui.h:35
+msgid "  MTU:  "
+msgstr "  MTU:  "
+
+#: ../data/ui/settings.ui.h:36
+msgid "  Speed:  "
+msgstr "  Velocidad:  "
+
+#: ../data/ui/settings.ui.h:37
+msgid "  Duplex:  "
+msgstr "  Dúplex:  "
+
+#: ../data/ui/settings.ui.h:38
+msgid "Ethernet information"
+msgstr "Información de Ethernet"
+
+#: ../data/ui/settings.ui.h:39
+msgid "Host:  "
+msgstr "Equipo:  "
+
+#: ../data/ui/settings.ui.h:40
+msgid "Domain:  "
+msgstr "Dominio:  "
+
+#: ../data/ui/settings.ui.h:41
+msgid "  Name:  "
+msgstr "  Nombre:  "
+
+#: ../data/ui/settings.ui.h:42
+msgid "  Type:  "
+msgstr "  Tipo:  "
+
+#: ../data/ui/settings.ui.h:43
+msgid "VPN provider information"
+msgstr "Información de proveedor de VPN"
+
+#: ../src/agent_dialogs.c:107
+#, c-format
+msgid ""
+"Previous Passphrase:\n"
+"%s"
+msgstr ""
+"Frase de contraseña anterior:\n"
+"%s"
+
+#: ../src/gtktechnology.c:268
+msgid ""
+"Left click to enable/disable\n"
+"Right click to set tethering informations"
+msgstr ""
+"Pulse para activar/desactivar\n"
+"Pulse con el botón secundario para establecer info. de «tethering»"
+
+#: ../src/gtktechnology.c:272
+msgid "Left to enable/disable"
+msgstr "Pulse para activar/desactivar"
+
+#: ../src/theme.c:33
+msgid "Tethering"
+msgstr "«Tethering»"
+
+#: ../src/theme.c:45
+msgid "Ethernet"
+msgstr "Ethernet"
+
+#: ../src/theme.c:49
+msgid "Cellular"
+msgstr "Datos móviles"
+
+#: ../src/theme.c:68
+msgid "Very good signal"
+msgstr "Señal muy buena"
+
+#: ../src/theme.c:72
+msgid "Good signal"
+msgstr "Señal buena"
+
+#: ../src/theme.c:76
+msgid "Low signal"
+msgstr "Señal baja"
+
+#: ../src/theme.c:80
+msgid "Very low signal"
+msgstr "Señal muy baja"
+
+#: ../src/theme.c:102
+msgid "Connman is not running"
+msgstr "Connman no se está ejecutando"
+
+#: ../src/theme.c:107
+msgid "Connected"
+msgstr "Conectado"
+
+#: ../src/theme.c:112
+msgid "Online"
+msgstr "En línea"
+
+#: ../src/theme.c:117
+msgid "Disconnected"
+msgstr "Desconectado"
