@@ -46,6 +46,8 @@ void cui_theme_get_type_icone_and_info(const char *type,
 					GdkPixbuf **image, const char **info);
 void cui_theme_get_signal_icone_and_info(uint8_t signal_strength,
 					GdkPixbuf **image, const char **info);
+void cui_theme_get_state_icon_name_and_info(enum connman_state state,
+					const char **icon_name, const char **info);
 void cui_theme_get_state_icone_and_info(enum connman_state state,
 					GdkPixbuf **image, const char **info);
 void cui_theme_get_tethering_icone_and_info(GdkPixbuf **image,

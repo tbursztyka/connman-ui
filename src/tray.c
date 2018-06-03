@@ -32,14 +32,14 @@ static int right_menu_handler_id = 0;
 void cui_trayicon_update_icon(void)
 {
 	enum connman_state state;
-	GdkPixbuf *image = NULL;
+	const char *icon = NULL;
 	const char *info = NULL;
 
 	state = connman_manager_get_state();
 
-	cui_theme_get_state_icone_and_info(state, &image, &info);
+	cui_theme_get_state_icon_name_and_info(state, &icon, &info);
 
-	gtk_status_icon_set_from_pixbuf(cui_trayicon, image);
+	gtk_status_icon_set_from_icon_name(cui_trayicon, icon);
 
 	gtk_status_icon_set_tooltip_text(cui_trayicon, info);
 	gtk_status_icon_set_visible(cui_trayicon, TRUE);

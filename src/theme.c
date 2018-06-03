@@ -88,42 +88,51 @@ void cui_theme_get_signal_icone_and_info(uint8_t signal_strength,
 
 }
 
-void cui_theme_get_state_icone_and_info(enum connman_state state,
-					GdkPixbuf **image, const char **info)
+void cui_theme_get_state_icon_name_and_info(enum connman_state state,
+					const char **icon_name, const char **info)
 {
 	const char *nfo = NULL;
-	GdkPixbuf *img = NULL;
+	const char *img = NULL;
 
 
 	switch (state) {
 	case CONNMAN_STATE_UNKNOWN:
-		img = gtk_icon_theme_load_icon(icon_theme,
-					"network-offline-symbolic", 24, 0, NULL);
+		img = "network-offline-symbolic";
 		nfo = _("Connman is not running");
 		break;
 	case CONNMAN_STATE_READY:
-		img = gtk_icon_theme_load_icon(icon_theme,
-					"network-idle-symbolic", 24, 0, NULL);
+		img = "network-idle-symbolic";
 		nfo = _("Connected");
 		break;
 	case CONNMAN_STATE_ONLINE:
-		img = gtk_icon_theme_load_icon(icon_theme,
-					"network-transmit-receive-symbolic", 24, 0, NULL);
+		img = "network-transmit-receive-symbolic";
 		nfo = _("Online");
 		break;
 	default:
-		img = gtk_icon_theme_load_icon(icon_theme,
-					"network-offline-symbolic", 24, 0, NULL);
+		img = "network-offline-symbolic";
 		nfo = _("Disconnected");
 
 		break;
 	}
 
-	if (image != NULL)
-		*image = img;
+	if (icon_name != NULL)
+		*icon_name = img;
 
 	if (info != NULL)
 		*info = nfo;
+}
+
+void cui_theme_get_state_icone_and_info(enum connman_state state,
+					GdkPixbuf **image, const char **info)
+{
+	const char *icon_name = NULL;
+	GdkPixbuf *img = NULL;
+	cui_theme_get_state_icon_name_and_info(state, &icon_name, info);
+	img = gtk_icon_theme_load_icon(icon_theme,
+				icon_name, 24, 0, NULL);
+
+	if (image != NULL)
+		*image = img;
 }
 
 void cui_load_theme(void)
